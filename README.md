@@ -1,1 +1,1 @@
-pnpm i
+Vite Vue3模板
