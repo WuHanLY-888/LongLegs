@@ -5,4 +5,9 @@ export const staticRouter: RouteRecordRaw[] = [
 		path: '/',
 		component: () => import('@/views/Home.vue'),
 	},
+	{
+		path: '/demo',
+		component: () => import('@/views/Demo/index.vue'),
+	},
+
 ]

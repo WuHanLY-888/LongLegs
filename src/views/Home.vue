@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import FirestComp from './FriestComponet.vue'
+import SubComponet from './SubComponet.vue';
+import Demo from './Demo/index.vue'
+
 </script>
 
 <template>
-  <FirestComp/>
+  <h1>hello</h1>
+  <SubComponet text="lalala" />
+  <Demo />
 </template>

@@ -5,6 +5,7 @@ import VueJsx from '@vitejs/plugin-vue-jsx'
 
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 // 浏览器css兼容前缀插件
 import autoprefixer from 'autoprefixer'
 // 兼容低版本浏览器插件
@@ -22,8 +23,10 @@ export default defineConfig({
 				enabled: true,
 			},
 			vueTemplate: true,
+			resolvers: [ElementPlusResolver()]
 		}),
 		Components({
+			resolvers: [ElementPlusResolver()],
 			dts: 'src/types/Components.d.ts',
 		}),
 	],
@@ -47,7 +50,7 @@ export default defineConfig({
 		],
 	},
 	// 在windows定义对象
-	define: {'process.env': {}},
+	define: { 'process.env': {} },
 	// 样式附加/样式兼容
 	css: {
 		preprocessorOptions: {

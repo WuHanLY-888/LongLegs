@@ -1,6 +1,5 @@
 import { mergeConfig } from 'vite'
 import checker from 'vite-plugin-checker'
-import mkcert from 'vite-plugin-mkcert'
 import baseConfig from './config.base'
 
 // 开发缓解
@@ -13,10 +12,10 @@ export default mergeConfig({
 			vueTsc: true,
 		}),
 		//ssl证书证书
-		mkcert()
+		// mkcert()
 	],
 	server: {
-		https:true,
+		https: false,
 		port: 3000,
 		host: '0.0.0.0',
 		open: false,
