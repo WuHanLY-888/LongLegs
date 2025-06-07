@@ -13,11 +13,11 @@ const addCount = () => {
 </script>
 
 <template>
-    <h1>Hello, demo Pages</h1>
-    <el-button @click="addCount">增加count{{ count.valueOf() }}</el-button>
+    <h1>Hello, demo Pages11111</h1>
+    <el-button @click="addCount">增加count{{ count }}</el-button>
     <el-button @click="demo.addItem(String(demo.rawItems.length + 1))">增加addItem</el-button>
     <div style="display: flex;">
         <div v-for="rawItem in demo.rawItems">{{ rawItem }} &nbsp;</div>
     </div>
-    <SubComponet :count="count.valueOf()" />
+    <SubComponet :count="count" />
 </template>
