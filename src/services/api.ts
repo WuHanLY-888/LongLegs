@@ -2,8 +2,8 @@ import axios from 'axios'
 
 
 const urlMap = new Map([
-	['/api', 'http://192.168.9.70:18089'],
-	['/ocrApi', 'http://192.168.0.130:5114'],
+	['/api', '/'],
+	['/ocrApi', '/'],
 ]);
 // 请求拦截器
 axios.interceptors.request.use(config => {
