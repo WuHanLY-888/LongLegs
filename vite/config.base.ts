@@ -6,6 +6,7 @@ import VueJsx from '@vitejs/plugin-vue-jsx'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import { PlusProComponentsResolver } from '@plus-pro-components/resolver'
 // 浏览器css兼容前缀插件
 import autoprefixer from 'autoprefixer'
 // 兼容低版本浏览器插件
@@ -26,7 +27,7 @@ export default defineConfig({
 			resolvers: [ElementPlusResolver()]
 		}),
 		Components({
-			resolvers: [ElementPlusResolver()],
+			resolvers: [ElementPlusResolver(), PlusProComponentsResolver()],
 			dts: 'src/types/Components.d.ts',
 		}),
 	],

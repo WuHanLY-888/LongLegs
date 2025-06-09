@@ -19,7 +19,8 @@
       "node",
       "vite/client",
       "vue",
-      "element-plus/global"
+      "element-plus/global",
+      "@vue/runtime-dom"
     ],
     "paths": {
       "@/*": [
@@ -34,6 +35,7 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "preserve",
+    "jsxImportSource": "vue", // 💥 非常关键！
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
@@ -41,6 +43,7 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
+    "src/**/*",
     "*.d.ts",
     "./src/**/*.ts",
     "./src/**/*.d.ts",
